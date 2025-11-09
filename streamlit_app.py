@@ -23,7 +23,7 @@ In this example we're using SteamlitcallbackHandler to display the thoughts & ac
 
 # side-bar for settings :-
 st.sidebar.title("Settings")
-api_key = st.sidebar.text_input("Enter your Groq API Key:", type = "Password")
+api_key = st.sidebar.text_input("Enter your Groq API Key:", type = "password")
 
 if "messages"not in st.session_state:
   st.session_state["messages"] = [
