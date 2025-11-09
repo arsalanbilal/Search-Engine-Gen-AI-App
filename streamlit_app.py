@@ -3,7 +3,7 @@ from langchain_groq import ChatGroq
 from langchain_community.utilities import ArxivAPIWrapper, WikipediaAPIWrapper, WikipediaAPIWrapper
 from langchain_community.tools import WikipediaQueryRun, ArxivQueryRun, DuckDuckGoSearchRun
 from langchain_classic.agents import AgentType, initialize_agent, agent_types
-from langchain_classic.callbacks import StreamlitCallbackHandler
+from langchain_classic.callbacks.streamlit import StreamlitCallbackHandler
 import os
 from dotenv import load_dotenv
 
@@ -42,7 +42,7 @@ if prompt:= st.chat_input(placeholder="What is Machine Learning?"):
   llm = ChatGroq(api_key = api_key, model_name = "openai/gpt-oss-120b", streaming= True)
   tools = [search, arxiv, wikipedia]
 
-  search_agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, handling_parsing_errors = True)
+  search_agent = initialize_agent(tools, llm, agent=AgentType.ZERO_SHOT_REACT_DESCRIPTION, handling_parsing_errors =True)
 
   with st.chat_message("Assistant"):
     st_cb = StreamlitCallbackHandler(st.container(), expand_new_thoughts=True)
