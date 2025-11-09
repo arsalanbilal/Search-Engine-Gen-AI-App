@@ -1,6 +1,9 @@
-langchain
 streamlit
-langchain_community
-langchain_classic
-Wikipedia
-Arxiv
+langchain
+langchain-groq
+langchain-community
+langchain-classic
+python-dotenv
+duckduckgo-search
+arxiv
+wikipedia
