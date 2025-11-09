@@ -3,7 +3,7 @@ from langchain_groq import ChatGroq
 from langchain_community.utilities import ArxivAPIWrapper, WikipediaAPIWrapper
 from langchain_community.tools import WikipediaQueryRun, ArxivQueryRun, DuckDuckGoSearchRun
 from langchain_classic.agents import AgentType, initialize_agent
-from langchain.callbacks.streamlit import StreamlitCallbackHandler
+from langchain_classic.callbacks.streamlit import StreamlitCallbackHandler
 import os
 from dotenv import load_dotenv
 
