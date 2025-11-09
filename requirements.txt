@@ -1,0 +1,6 @@
+langchain
+streamlit
+langchain_community
+langchain_classic
+Wikipedia
+Arxiv
