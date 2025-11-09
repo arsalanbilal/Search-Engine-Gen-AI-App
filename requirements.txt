@@ -4,6 +4,6 @@ langchain-groq
 langchain-community
 langchain-classic
 python-dotenv
-duckduckgo-search
+ddgs>=1.0.0
 arxiv
 wikipedia
