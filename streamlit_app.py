@@ -27,12 +27,12 @@ api_key = st.sidebar.text_input("Enter your Groq API Key:", type = "password")
 
 if "messages"not in st.session_state:
   st.session_state["messages"] = [
-    {"role": "Assistant", "content" : "Hii, I am a Chatbot who can search the Web. How can i help you?"}
+    {"role": "Assistant", "content" : "Hi, I am a Chatbot who can search the Web. How can i help you?"}
   ]
 
 
 for msg in st.session_state.messages:
-  st.chat_message(msg["role"].write(msg['content'])) 
+  st.chat_message(msg["role"].write(msg["content"])) 
 
 
 if prompt:= st.chat_input(placeholder="What is Machine Learning?"):
